@@ -1,6 +1,8 @@
 // components/SignupForm.tsx
 
 import React from 'react';
+import Link from 'next/link';
+
 
 const SignupForm: React.FC = () => {
     return (
@@ -45,14 +47,15 @@ const SignupForm: React.FC = () => {
                     <img src="/fb-logo.svg" alt="Facebook" style={{ width: '16px', height: '19px' }} />
                     Continue with Facebook
                 </button>
-                <button
-                    type="button"
-                    className="mb-10 w-[256px] h-[48px] bg-[#222222] text-[#FFFFFFEB] text-center font-normal rounded-md border-2 border-[#FFFFFFEB] flex items-center justify-center gap-3 text-lg"
-                    style={{ letterSpacing: '0.005em', lineHeight: '22px' }}
-                >
-                    {/* If you have an email icon, you can add it here with the style attribute for width and height */}
-                    Continue with Email
-                </button>
+                <Link href="/emailsignup" passHref>
+                    <button
+                        type="button"
+                        className="mb-10 w-[256px] h-[48px] bg-[#222222] text-[#FFFFFFEB] text-center font-normal rounded-md border-2 border-[#FFFFFFEB] flex items-center justify-center gap-3 text-lg"
+                        style={{ letterSpacing: '0.005em', lineHeight: '22px' }}
+                    >
+                        Continue with Email
+                    </button>
+                </Link>
             </div>
 
             <div className="flex flex-col items-center">
